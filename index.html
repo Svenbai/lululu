@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				height: 100%;
+				min-width: 1110px;
+			}
+			html{
+				width: 100%;
+				height: 100%;
+			}
+			.main{
+				width: 100%;
+				height: 100%;
+				background: url(img/bg.jpg) center;
+				background-position-x: 0;
+				position: relative;
+				transition: 1s linear;
+
+			}
+			nav{
+				width: 100%;
+				height: 75px;
+				/*background: yellowgreen;*/
+				position: absolute;
+				top: 20px;
+				z-index: 2;
+			}
+			.logo{
+				width:800px ;
+				padding-left: 42px;
+			}
+			
+			.logo1{
+				background: url(img/logo1.png) no-repeat;
+				width: 146px;
+				height: 54px;
+				margin-top: 10px;
+				cursor: pointer;
+				display: block;
+				float: left;
+				margin-right: 30px;
+			}
+			.logo2{
+				background: url(img/logo2.png) no-repeat;
+				width: 193px;
+				height: 54px;
+				margin-top: 10px;
+				cursor: pointer;
+				display: block;
+				float: left;
+				margin-right: 30px;
+			}
+			.logo3{
+				background: url(img/logo3.png) no-repeat;
+				width: 314px;
+				height: 75px;
+				cursor: pointer;
+				display: block;
+				float: left;
+				margin-right: 30px;
+			}
+			.con1{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				z-index: 0;
+			}
+			.con2{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				z-index: 0;
+				display: none;
+			}
+			.con_p_1{
+				width: 524px;
+				height: 388px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				border: 1px solid;
+				margin-left: -262px;
+				margin-top: -194px;
+			}
+			.con_p_1_k{
+				transform: skew(-21deg);
+				overflow: hidden;
+			}
+			.con_p_1_k img{
+				transform: skew(21deg);
+				margin-left: -75px;
+				animation: sc2 1s;
+
+			}
+			.con1_t_k{
+				width: 360px;
+				height: 500px;
+				/*background: palevioletred;*/
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-left: -600px;
+				margin-top: -200px;
+			}
+			.con1_t1{
+				font-size: 24px;
+				color: #397bcd;
+				margin-top: 40px;
+				margin-left: 60px;
+				animation: sc3 1.5s;
+			}
+			.con1_t2{
+				font-size: 48px;
+				color: white;
+				font-weight: bold;
+				animation: sc4 1s forwards;
+				width: 350px;
+			}
+			.con1_t3{
+				color: white;
+				width:300px ;
+				margin-left: 60px;
+				margin-top: 20px;
+				animation: sc4 1s 0.1s forwards;
+			}
+			.con1_svg{
+				width: 300px;
+				height: 120px;
+				border: 1px solid;
+				margin-left: 60px;
+				margin-top: 40px;
+			}
+			.next_k{
+				width: 480px;
+				height: 270px;
+				position: absolute;
+				animation: sc1 4s linear infinite;
+				right: 5%;
+				top:30%;
+
+			}
+			.next_k_t{
+				width: 150px;
+				height: 150px;
+				transform: rotate(45deg);
+				border: 1px solid #c0a069;
+				position: absolute;
+				top: 25%;
+				left: 60%;
+				z-index: 3;
+				cursor: pointer;
+				transition: all 0.6s; 
+			}
+			.next_k_t img{
+				transform: rotate(-45deg);
+				width: 30%;
+				position: absolute;
+				top: 35%;
+				left: 38%;
+			}
+			.next_k_b{
+				width: 140px;
+				height: 140px;
+				transform: rotate(45deg);
+				border: 1px solid #23345b;
+				position: absolute;
+				top: 27%;
+				left: 69%;
+				z-index: 2;
+				transition: all 0.6s; 
+			}
+			.next_k_date{
+				width: 60px;
+				height: 30px;
+				text-align: center;
+				line-height: 30px;
+				color: #c0a069;
+				background: rgba(10, 21, 36, 0.8);
+				border: 1px solid;
+				display: inline-block;
+				position: absolute;
+				top: 48%;
+				left: 35%;
+				transition: all 0.6s;
+			}
+			@keyframes sc1{
+				0%{transform: scale(1);}
+				50%{transform: scale(1.05);}
+				100%{transform: scale(1) ;}
+			}
+			@keyframes sc2{
+				0%{transform: scale(1.4) skew(21deg);}
+				100%{transform: scale(1) skew(21deg);}
+			}
+			@keyframes sc3{
+				0%{opacity: 0}
+				100%{opacity: 1}
+			}
+			@keyframes sc4{
+				0%{margin-left:-200px;opacity: 0}
+				100%{margin-left: 60px;opacity: 1}
+			}
+			@keyframes sc5{
+				0%{margin-left:60px;}
+				100%{margin-left: -200px;opacity: 0}
+			}
+			/*图片移动*/
+			@keyframes sc7{
+				0%{margin-left:-75px;}
+				100%{margin-left:-200px;opacity: 0}
+			}
+			@keyframes sc6{
+				0%{opacity: 1}
+				100%{opacity: 0}
+			}
+			/*con2 从右往左*/
+			@keyframes sc8{
+				0%{margin-left:200px;opacity: 0}
+				100%{margin-left:-75px;opacity: 1}
+			}
+			.btn_list_k{
+				width: 1100px;
+				height: 150px;
+				border: 1px solid;
+				/*background: aquamarine;*/
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-left: -550px;
+				margin-top: 250px;
+			}
+			.btn_list_k ul{
+				padding: 0;
+				width: 800px;
+				height: 20px;
+				border-bottom: 1px solid #325886;
+				position: absolute;
+				top: 40px;
+			}
+			.btn{
+				list-style: none;
+				width: 13px;
+				height: 13px;
+				background:#325886;
+				float: left;
+				margin-right: 60px;
+				margin-top: 13px;
+				border-radius: 50%;
+			}
+			.press{
+				background: white;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main"> <!--大框-->
+			<nav>
+				<div class="logo" style="">
+					<a href="" class="logo1"></a>
+					<a href="" class="logo2"></a>
+					<a href="" class="logo3"></a>
+				</div>
+			</nav>
+			<div class="con1" style="">
+				<div class="con_p_1">
+					<div class="con_p_1 con_p_1_k">
+						<img src="img/pic-1.jpg" class="img1"/>
+					</div>
+				</div>
+				<div class="con1_t_k">
+					<div class="con1_t1">2017全球总决赛</div>
+					<div class="con1_t2">全程落地中国</div>
+					<div class="con1_t3">2017《英雄联盟》全球电竞赛事发布会2月8日在上海召开，正式对外公布比赛将先后在武汉、广州、上海、北京四座城市进行。</div>
+					<div class="con1_svg"></div>
+				</div>	
+			</div>
+			<!--con1结束↑↑↑↑↑↑↑↑↑↑↑-->
+			<div class="con2" style="">
+				<div class="con_p_1">
+					<div class="con_p_1 con_p_1_k">
+						<img src="img/pic-2-1.jpg" class="img1"/>
+					</div>
+				</div>
+				<div class="con1_t_k">
+					<div class="con1_t1">2017全球总决赛</div>
+					<div class="con1_t2">入围赛赛制公布</div>
+					<div class="con1_t3">今年全球总决赛新增入围赛阶段，来自12个赛区的12支队伍将参与其中，最终决出4个名额进入小组赛。</div>
+					<div class="con1_svg"></div>
+				</div>
+			</div>
+			<div class="next_k">     <!--右按钮-->
+					<span class="next_k_date">02.09</span>
+					<div class="next_k_t">
+						<img src="img/右.png"/>
+					</div>
+					<div class="next_k_b"></div>
+			</div>
+			<div class="btn_list_k">  <!--下导航-->
+				<ul>
+					<li class="btn press" style="margin-left: 40px" ></li>
+					<li class="btn"></li>
+					<li class="btn"></li>
+					<li class="btn"></li>
+					<li class="btn"></li>
+					<li class="btn"></li>
+					<li class="btn"></li>
+					<li class="btn"></li>
+					<li class="btn"></li>
+					<li class="btn"></li>
+				</ul>
+			</div>
+		</div><!--大框结尾-->
+	</body>
+	<script type="text/javascript">
+		var btn = document.getElementsByClassName('btn')[0];
+		var main = document.getElementsByClassName('main')[0];
+		var next = document.getElementsByClassName('next_k_t')[0];
+		var next_k =document.getElementsByClassName("next_k")[0];
+		var next_b =document.getElementsByClassName("next_k_b")[0];
+		var next_date =document.getElementsByClassName("next_k_date")[0];
+        var con1t = document.getElementsByClassName("con1_t1")[0];
+		var con2t = document.getElementsByClassName("con1_t2")[0];
+		var con3t = document.getElementsByClassName("con1_t3")[0];
+		var con1 = document.getElementsByClassName("con1")[0];
+        var con2 = document.getElementsByClassName("con2")[0];
+		var img1 = document.getElementsByClassName('img1')[0];
+        var img2 = document.getElementsByClassName('img1')[1];
+		var bg = 0
+		next.onmouseover = function(){
+			next_k.style.animation = 'none';
+			this.style.transform = "scale(0.8) rotate(45deg)";
+			next_b.style.transform = "scale(0.8) rotate(45deg)";
+			next_date.style.transform = "translateX(60px)"
+		};
+		next.onmouseout = function(){
+			next_k.style.animation = 'sc1 4s linear infinite';
+			this.style.transform = "scale(1) rotate(45deg)";
+			next_b.style.transform = "scale(1) rotate(45deg)";
+			next_date.style.transform = "translateX(0px)";
+		}
+		next.onclick = function () {
+		    bg+=770;
+			main.style.backgroundPositionX = -bg+'px';
+            con1t.style.animation = 'sc5 1s forwards';
+			con2t.style.animation = 'sc5 1s forwards';
+            con3t.style.animation = 'sc5 1s 0.2s forwards';
+            img1.style.animation = 'sc7 1s 0.4s forwards';
+//           img2.style.animation = 'sc8 1s 0.4s forwards';
+            setTimeout(function () {
+				con1.style.display = "none"
+				con2.style.display = "block"
+            },1200)
+
+        }
+	</script>
+</html>
